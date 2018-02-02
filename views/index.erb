@@ -11,23 +11,35 @@
 <body>
 
 <%= @json %>
-<div id="images"></div>
 
-<script>
-(function() {
-  var flickerAPI = "https://snapmeter.com/api/v2/531e19848df5cb0b35014e85/meters/2166484536790/bill-summary?token=6d547442-417b-41a3-8838-b022f9c2974d";
-  $.ajax({ url: flickerAPI })
-    .done(function( data ) {
-      console.log(data)
-      // $.each( data.data, function( i, item ) {
-      //   $( "<p>" ).text(item.attributes.peak ).appendTo( "#images" );
-      //   if ( i === 3 ) {
-      //     return false;
-      //   }
-      // });
-    });
-})();
-</script>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Bill Summary Id</th>
+      <th scope="col">Attributes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @array_of_bills.each do |bill| %>
+      <tr>
+        <th scope="row">
+          <%= bill.id %>
+        </th>
+        <th>
+          <ul>
+            <li>Cost: <%= bill.cost %></li>
+            <li>Used Energy: <%= bill.used_energy %> kWh</li>
+            <li>Peak Usage: <%= bill.peak_energy %> kW</li>
+            <li>Range: <%= bill.initial_date %> to <%= bill.closing_date %></li>
+          </ul>
+        </th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<div id="images"></div>
 
 </body>
 </html>
