@@ -8,7 +8,7 @@ class GridiumData
 
   def get_json
     req = Net::HTTP::Get.new(url.to_s)
-    res = Net::HTTP.start(url.host, url.port) {|http|
+    res = Net::HTTP.start(url.host, url.port, :use_ssl => true) {|http|
       http.request(req)
     }
     res.body
