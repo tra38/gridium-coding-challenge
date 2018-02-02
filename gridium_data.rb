@@ -1,6 +1,5 @@
 require 'net/http'
 require 'json'
-require 'pry'
 
 class GridiumData
   attr_reader :url, :rows
@@ -10,7 +9,6 @@ class GridiumData
     @rows = json["data"].map do |row|
       GridiumRow.new(row)
     end
-    binding.pry
   end
 
   private
