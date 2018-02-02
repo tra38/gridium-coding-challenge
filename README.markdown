@@ -1,30 +1,8 @@
-# Here is a sample/template sinatra application ready for deployment to [Heroku](http://heroku.com).
+# Gridium Coding Challenge
 
-**NOTE** This is for heroku.com and not herokugarden.com
+This web application was built using Sinatra and uses Ruby 2.4.1. The site is currently live on https://gridium-coding-challenge.herokuapp.com
 
-* Create an acount in seconds at [Heroku](http://heroku.com/signup).
-* Install the gem `sudo gem install heroku`.
-* If you do not have an SSH key
-you'll need to [generate
-one](http://heroku.com/docs/index.html#_setting_up_ssh_public_keys)
-and [tell Heroku about
-it](http://heroku.com/docs/index.html#_manage_keys_on_heroku)
-* Clone this repo `git clone git://github.com/sinatra/heroku-sinatra-app [appname]`
-* `cd /path/to/project`
-* `heroku create [optional-app-name]` (You can rename your app with `heroku rename`)
-* `git push heroku master`
-
-**NOTES**
-
-The small amount of code is heavily commented. If you have questions
-or comments please use [the channels provided](http://www.sinatrarb.com/contributing.html) by the Sinatra community as
-we at Heroku are heavily involved in Sinatra.  Please use the Heroku [mailing list](http://groups.google.com/group/heroku) if you
-have non Sinatra questions.
-
-See [these guidelines](http://www.sinatrarb.com/contributing.html) for
-contributing or bugs.
-
-Happy Development and Deploying!
-
-Sincerely,
-The Heroku Team
+## Instructions
+1. ```git clone``` the repo.
+2. ```bundle install```
+3. ```rackup``` to set up the server. Visit localhost:9292 to see the site.
